@@ -153,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
                 value1 = 0;
                 value2 = 0;
                 result = 0;
+                add = false;
+                sub = false;
+                mult = false;
+                div = false;
                 display.setText(getString(R.string.zero));
             }
         });
