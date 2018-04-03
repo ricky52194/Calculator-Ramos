@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="clear">C</string>
+    <string name="clearEntry">CE</string>
+    <string name="decimal">.</string>
+    <string name="plusMinus">+/-</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="equals">=</string>
+    <string name="onScreenKey">onScreenKey</string>
+    <string name="value1Key">value1Key</string>
+    <string name="value2Key">value2Key</string>
+    <string name="resultKey">resultKey</string>
+    <string name="addKey">addKey</string>
+    <string name="subKey">subKey</string>
+    <string name="multKey">multKey</string>
+    <string name="divKey">divKey</string>
 </resources>

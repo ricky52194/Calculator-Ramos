@@ -9,26 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView display;
-    private Button zero;
-    private Button one;
-    private Button two;
-    private Button three;
-    private Button four;
-    private Button five;
-    private Button six;
-    private Button seven;
-    private Button eight;
-    private Button nine;
-    private Button clear;
-    private Button clearEntry;
-    private Button equals;
-    private Button plus;
-    private Button minus;
-    private Button multiply;
-    private Button divide;
-    private Button plusMinus;
-    private Button decimal;
-
+    private Button zero, one, two, three, four, five, six, seven, eight, nine, clear, clearEntry, equals, plus, minus, multiply, divide, plusMinus, decimal;
     private double value1 = 0, value2 = 0, result = 0;
     private boolean add = false, sub = false, mult = false, div = false;
 
@@ -37,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         display = findViewById(R.id.display);
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
@@ -58,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
         clear = findViewById(R.id.clear);
         clearEntry = findViewById(R.id.clearEntry);
 
+        display.setText(getString(R.string.zero));
         zero.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                str += "0";
+                str += getString(R.string.zero);
                 display.setText(str);
             }
         });
@@ -69,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("1");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.one));
                 }else{
-                    str += "1";
+                    str += getString(R.string.one);
                     display.setText(str);
                 }
             }
@@ -80,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("2");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.two));
                 }else{
-                    str += "2";
+                    str += getString(R.string.two);
                     display.setText(str);
                 }
             }
@@ -91,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         three.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("3");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.three));
                 }else{
-                    str += "3";
+                    str += getString(R.string.three);
                     display.setText(str);
                 }
             }
@@ -102,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("4");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.four));
                 }else{
-                    str += "4";
+                    str += getString(R.string.four);
                     display.setText(str);
                 }
             }
@@ -113,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("5");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.five));
                 }else{
-                    str += "5";
+                    str += getString(R.string.five);
                     display.setText(str);
                 }
             }
@@ -124,10 +107,10 @@ public class MainActivity extends AppCompatActivity {
         six.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("6");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.six));
                 }else{
-                    str += "6";
+                    str += getString(R.string.six);
                     display.setText(str);
                 }
             }
@@ -135,10 +118,10 @@ public class MainActivity extends AppCompatActivity {
         seven.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("7");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.seven));
                 }else{
-                    str += "7";
+                    str += getString(R.string.seven);
                     display.setText(str);
                 }
             }
@@ -146,10 +129,10 @@ public class MainActivity extends AppCompatActivity {
         eight.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("8");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.eight));
                 }else{
-                    str += "8";
+                    str += getString(R.string.eight);
                     display.setText(str);
                 }
             }
@@ -157,10 +140,10 @@ public class MainActivity extends AppCompatActivity {
         nine.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                if(str.equals("0")){
-                    display.setText("9");
+                if(str.equals(getString(R.string.zero))){
+                    display.setText(getString(R.string.nine));
                 }else{
-                    str += "9";
+                    str += getString(R.string.nine);
                     display.setText(str);
                 }
             }
@@ -170,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 value1 = 0;
                 value2 = 0;
                 result = 0;
-                display.setText("0");
+                display.setText(getString(R.string.zero));
             }
         });
 
@@ -184,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         decimal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String str = display.getText().toString();
-                str = str + ".";
+                str = str + getString(R.string.decimal);
                 display.setText(str);
             }
         });
@@ -230,8 +213,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 value2 = Double.parseDouble(display.getText().toString());
                 if(add){
-                    result = value1 + value2;
 
+                    result = value1 + value2;
                     display.setText(Double.toString(result));
                     add = false;
                 }else if(sub){
@@ -251,4 +234,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(getString(R.string.onScreenKey), display.getText().toString());
+        outState.putDouble(getString(R.string.value1Key), value1);
+        outState.putDouble(getString(R.string.value2Key), value2);
+        outState.putDouble(getString(R.string.resultKey), result);
+        outState.putBoolean(getString(R.string.addKey), add);
+        outState.putBoolean(getString(R.string.subKey), sub);
+        outState.putBoolean(getString(R.string.multKey), mult);
+        outState.putBoolean(getString(R.string.divKey), div);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        display.setText(savedInstanceState.getString(getString(R.string.onScreenKey)));
+        value1 = savedInstanceState.getDouble(getString(R.string.value1Key));
+        value2 = savedInstanceState.getDouble(getString(R.string.value2Key));
+        result = savedInstanceState.getDouble(getString(R.string.resultKey));
+        add = savedInstanceState.getBoolean(getString(R.string.addKey));
+        sub = savedInstanceState.getBoolean(getString(R.string.subKey));
+        mult = savedInstanceState.getBoolean(getString(R.string.multKey));
+        div = savedInstanceState.getBoolean(getString(R.string.divKey));
+    }
 }
